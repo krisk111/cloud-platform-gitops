@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+
+metadata:
+  name: cloud-platform-application
+  namespace: argocd
+
+spec:
+  project: default
+
+  sources:
+    - repoURL: https://github.com/krisk111/cloud-platform-application.git
+      targetRevision: main
+      path: helm/cloud-platform-application
+      helm:
+        valueFiles:
+          - $values/environments/dev/values.yaml
+
+    - repoURL: https://github.com/krisk111/cloud-platform-gitops.git
+      targetRevision: main
+      ref: values
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
