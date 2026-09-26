@@ -1,8 +1,0 @@
-image:
-  repository: 281459851067.dkr.ecr.us-east-1.amazonaws.com/cloud-platform-application
-  tag: "eb8e765591ff626d069d0b3b4be383982b492ce6"
-  pullPolicy: IfNotPresent
-
-ingress:
-  enabled: true
-  host: cloud-platform.example
