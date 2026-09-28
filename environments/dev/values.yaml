@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: 281459851067.dkr.ecr.us-east-1.amazonaws.com/cloud-platform-application
-  tag: c275053e029bb38e0390391fef295a790d9461a1
+  tag: 59394888377f925fe0bc36cb7f9c5fb871cecc3f
 
 ingress:
   enabled: true
