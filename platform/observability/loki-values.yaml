@@ -23,6 +23,7 @@ singleBinary:
   persistence:
     enabled: true
     size: 10Gi
+    storageClass: gp2
 
 # Disable the components used by other Loki deployment modes.
 backend:
