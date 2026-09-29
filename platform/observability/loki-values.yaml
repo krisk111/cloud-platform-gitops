@@ -73,3 +73,6 @@ chunksCache:
 
 resultsCache:
   enabled: false
+
+test:
+  enabled: false
