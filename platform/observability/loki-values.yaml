@@ -64,3 +64,12 @@ bloomBuilder:
 
 bloomGateway:
   replicas: 0
+
+lokiCanary:
+  enabled: false
+
+chunksCache:
+  enabled: false
+
+resultsCache:
+  enabled: false
