@@ -1,3 +1,7 @@
+controller:
+  type: deployment
+  replicas: 1
+
 alloy:
   configMap:
     content: |
@@ -15,3 +19,4 @@ alloy:
           url = "http://loki-gateway.loki.svc.cluster.local/loki/api/v1/push"
         }
       }
+
