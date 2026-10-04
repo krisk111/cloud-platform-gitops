@@ -1,0 +1,34 @@
+mode: deployment
+
+replicaCount: 1
+
+image:
+  repository: otel/opentelemetry-collector-k8s
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 256Mi
+
+config:
+  receivers:
+    jaeger: null
+    zipkin: null
+    prometheus: null
+
+  service:
+    pipelines:
+      logs: null
+      metrics: null
+
+      traces:
+        receivers:
+          - otlp
+        processors:
+          - memory_limiter
+          - batch
+        exporters:
+          - debug
