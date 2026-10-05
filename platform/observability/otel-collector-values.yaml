@@ -19,6 +19,10 @@ config:
     zipkin: null
     prometheus: null
 
+  exporters:
+    debug:
+      verbosity: detailed
+
   service:
     pipelines:
       logs: null
@@ -32,3 +36,4 @@ config:
           - batch
         exporters:
           - debug
+
