@@ -2,8 +2,12 @@ replicaCount: 1
 
 image:
   repository: 281459851067.dkr.ecr.us-east-1.amazonaws.com/cloud-platform-application
-  tag: 1f8db3dbb7b9bcea6987946785c8c1e9c91ebc13
+  tag: da2af8b70034db1261374d466fd8cdb5ceaa1d81
 
 ingress:
   enabled: true
   host: cloud-platform.example
+
+otel:
+  tracesExporter: otlp
+  tracesEndpoint: "http://otel-collector-opentelemetry-collector.opentelemetry.svc.cluster.local:4318/v1/traces"
